@@ -1,5 +1,5 @@
 import pytest
-from day1.product import Product
+from product import Product
 
 
 @pytest.fixture

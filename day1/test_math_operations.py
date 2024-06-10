@@ -1,4 +1,4 @@
-from day1.math_operations import add, minus
+from math_operations import add, minus
 
 
 def test_add():

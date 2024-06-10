@@ -1,5 +1,5 @@
 import pytest
-from day1.person import Person
+from person import Person
 
 
 def test_person():

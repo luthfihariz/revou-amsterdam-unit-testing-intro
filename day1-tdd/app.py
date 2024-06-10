@@ -28,16 +28,16 @@ def add_item():
     }, 201
 
 
-# @app.route("/items/<string:name>", methods=["GET"])
-# def get_item(name):
-#     if name not in inventory:
-#         return jsonify({"error": "Item not found"}), 404
-#     return jsonify({"name": name, "quantity": inventory[name]})
+@app.route("/items/<string:name>", methods=["GET"])
+def get_item(name):
+    if name not in inventory:
+        return {"error": "Item not found"}, 404
+    return {"name": name, "quantity": inventory[name]}
 
 
-# @app.route("/items/<string:name>", methods=["DELETE"])
-# def delete_item(name):
-#     if name not in inventory:
-#         return jsonify({"error": "Item not found"}), 404
-#     del inventory[name]
-#     return "", 204
+@app.route("/items/<string:name>", methods=["DELETE"])
+def delete_item(name):
+    if name not in inventory:
+        return {"error": "Item not found"}, 404
+    del inventory[name]
+    return "", 204
